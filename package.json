@@ -1,0 +1,33 @@
+{
+  "name": "statik-starter-kit",
+  "version": "1.0.0",
+  "description": "Statik Starter Kit.",
+  "author": "Roberto Achar <robertoachar@gmail.com>",
+  "homepage": "https://github.com/robertoachar/statik-starter-kit#readme",
+  "keywords": [
+    "node"
+  ],
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertoachar/statik-starter-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robertoachar/statik-starter-kit/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "4.19.1",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-prettier": "2.6.0",
+    "prettier": "1.13.4"
+  },
+  "license": "MIT"
+}

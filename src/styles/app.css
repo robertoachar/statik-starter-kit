@@ -5,16 +5,9 @@
   --pico-void: #192a56;
   --rise-n-shine: #fbc531;
   --text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
-  --stack-html5: #e34f26;
-  --stack-css3: #1572b6;
-  --stack-javascript: #f7df1e;
-  --stack-webpack: #8dd6f9;
 }
 
-* {
-  box-sizing: border-box;
-}
-
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -31,8 +24,7 @@ body {
 
 h1,
 h2,
-p,
-li {
+p {
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -100,42 +92,30 @@ a {
 }
 
 .hero {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
 .hero h1 {
   color: var(--lynx-white);
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
+  text-shadow: var(--text-shadow);
+}
+
+.hero p {
+  color: var(--lynx-white);
+  font-size: 2rem;
+  text-shadow: var(--text-shadow);
 }
 
 .main {
   display: grid;
   grid-gap: 2rem;
-  grid-template-areas:
-    'welcome features'
-    'stack stack'
-    'license license';
+  grid-template-columns: repeat(2, 1fr);
   margin: 0 auto;
   max-width: 1200px;
   padding: 2rem 1rem;
-}
-
-.section__welcome {
-  grid-area: welcome;
-}
-
-.section__features {
-  grid-area: features;
-}
-
-.section__stack {
-  grid-area: stack;
-}
-
-.section__license {
-  grid-area: license;
 }
 
 .section h2 {
@@ -143,54 +123,18 @@ a {
   font-weight: 600;
 }
 
-.stack__list {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.stack__list li {
-  background-color: var(--pico-void);
-  border-left: 1rem solid red;
-  color: var(--lynx-white);
-  padding: 0.5rem 1rem;
-}
-
-.stack__html5 {
-  border-left-color: var(--stack-html5) !important;
-}
-
-.stack__css3 {
-  border-left-color: var(--stack-css3) !important;
-}
-
-.stack__javascript {
-  border-left-color: var(--stack-javascript) !important;
-}
-
-.stack__webpack {
-  border-left-color: var(--stack-webpack) !important;
-}
-
 @media (max-width: 768px) {
   .main {
-    grid-template-areas:
-      'welcome'
-      'features'
-      'stack'
-      'license';
-  }
-
-  .stack__list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
 @media (max-width: 576px) {
-  .stack__list {
-    grid-template-columns: repeat(1, 1fr);
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
   }
 }

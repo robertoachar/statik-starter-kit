@@ -103,9 +103,10 @@ a {
   text-shadow: var(--text-shadow);
 }
 
-.hero p {
+.hero h2 {
   color: var(--lynx-white);
   font-size: 2rem;
+  padding: 1rem;
   text-shadow: var(--text-shadow);
 }
 
